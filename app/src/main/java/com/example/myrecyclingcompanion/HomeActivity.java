@@ -64,7 +64,6 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }).show();*/
             Log.d("tag",result.getContents());
-            //test
         }
     });
 }
