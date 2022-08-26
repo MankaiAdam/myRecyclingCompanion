@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Ayoub/StudioProjects/app/src/main/res/layout/activity_home.xml" value="0.23596014492753623" />
+        <entry key="..\:/Users/Ayoub/StudioProjects/app/src/main/res/drawable/coin.xml" value="0.2305" />
+        <entry key="..\:/Users/Ayoub/StudioProjects/app/src/main/res/drawable/hamburger.xml" value="0.2305" />
+        <entry key="..\:/Users/Ayoub/StudioProjects/app/src/main/res/layout/activity_home.xml" value="0.9" />
         <entry key="..\:/Users/Ayoub/StudioProjects/app/src/main/res/layout/activity_main.xml" value="0.23596014492753623" />
         <entry key="..\:/Users/manka/AndroidStudioProjects/myRecyclingCompanion/app/src/main/res/layout/activity_home.xml" value="0.4" />
         <entry key="..\:/Users/manka/AndroidStudioProjects/myRecyclingCompanion/app/src/main/res/layout/activity_main.xml" value="0.2" />
