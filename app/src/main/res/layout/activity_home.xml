@@ -56,8 +56,8 @@
 
                 <ImageButton
                     android:id="@+id/overview_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="117dp"
+                    android:layout_height="28dp"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/mo_activated"
                     app:layout_constraintStart_toStartOf="@+id/imageView7"
@@ -65,10 +65,11 @@
 
                 <ImageButton
                     android:id="@+id/map_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="48dp"
+                    android:layout_height="0dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/map_disabled"
+                    app:layout_constraintBottom_toBottomOf="@+id/overview_btn"
                     app:layout_constraintStart_toEndOf="@+id/overview_btn"
                     app:layout_constraintTop_toTopOf="@+id/overview_btn" />
 
@@ -99,10 +100,11 @@
 
                 <ImageButton
                     android:id="@+id/button4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="84dp"
+                    android:layout_height="0dp"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/promo_disabled"
+                    app:layout_constraintBottom_toBottomOf="@+id/overview_btn"
                     app:layout_constraintStart_toEndOf="@+id/map_btn"
                     app:layout_constraintTop_toTopOf="@+id/map_btn" />
 
@@ -156,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="My points:"
+                    android:text="Active challenges:"
                     android:textColor="#425747"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/textView"
@@ -296,6 +298,7 @@
                     android:id="@+id/points_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
                     android:layout_marginBottom="33dp"
                     android:fontFamily="@font/poppins_bold"
                     android:text="120"
@@ -303,7 +306,8 @@
                     android:textColor="#9E815C"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                    app:layout_constraintEnd_toEndOf="@+id/textView5" />
+                    app:layout_constraintEnd_toStartOf="@+id/donated_plastic_text"
+                    app:layout_constraintStart_toStartOf="@+id/imageView" />
 
                 <TextView
                     android:id="@+id/donated_plastic_text"

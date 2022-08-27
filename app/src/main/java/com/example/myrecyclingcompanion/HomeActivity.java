@@ -1,8 +1,11 @@
 package com.example.myrecyclingcompanion;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -30,7 +33,10 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        Window w = getWindow();
+        w.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        w.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        w.setStatusBarColor(Color.rgb(254,254,254));
         overview_btn = findViewById(R.id.overview_btn);
         maps_btn = findViewById(R.id.map_btn);
         shop_btn = findViewById(R.id.shop_btn);
