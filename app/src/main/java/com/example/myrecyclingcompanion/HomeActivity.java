@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AlertDialog;
@@ -18,26 +19,24 @@ import java.security.acl.Group;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button overview_btn,challenges_btn,scan_btn;
-    ConstraintLayout overview_grp,challenges_grp;
+    ImageButton overview_btn,maps_btn;
+    Button scan_btn;
+    ConstraintLayout overview_grp,maps_grp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         overview_btn = findViewById(R.id.overview_btn);
-        challenges_btn = findViewById(R.id.challenges_btn);
-        scan_btn = findViewById(R.id.scan_btn);
-        overview_grp = findViewById(R.id.overview_grp);
-        challenges_grp = findViewById(R.id.challenges_grp);
-        scan_btn = findViewById(R.id.scan_btn);
+        overview_btn.setImageDrawable(getDrawable(R.drawable.mo_activated));
+        maps_btn = findViewById(R.id.challenges_btn);
+        maps_btn.setImageDrawable(getDrawable(R.drawable.map_disabled));
+        scan_btn = findViewById(R.id.scan_btn1);
+
+        scan_btn = findViewById(R.id.scan_btn1);
 
         overview_btn.setOnClickListener(view -> {
-            overview_grp.setVisibility(View.VISIBLE);
-            challenges_grp.setVisibility(View.INVISIBLE);
         });
-        challenges_btn.setOnClickListener(view -> {
-            overview_grp.setVisibility(View.INVISIBLE);
-            challenges_grp.setVisibility(View.VISIBLE);
+        maps_btn.setOnClickListener(view -> {
         });
         scan_btn.setOnClickListener(view -> {
             scan_code();
