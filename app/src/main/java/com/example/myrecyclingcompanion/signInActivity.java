@@ -1,18 +1,23 @@
 package com.example.myrecyclingcompanion;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import java.util.concurrent.TimeUnit;
 
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -38,7 +43,7 @@ public class signInActivity extends AppCompatActivity {
     int phone_number;
     ConstraintLayout verify_grp, sign_in_grp;
     EditText phone_number_text, code_text;
-    Button verify_btn, sign_in_btn;
+    ImageButton verify_btn, sign_in_btn;
     private FirebaseAuth mAuth;
     // [END declare_auth]
 
@@ -50,6 +55,10 @@ public class signInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+        Window w = getWindow();
+        w.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        w.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        w.setStatusBarColor(Color.rgb(77,160,97));
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
@@ -59,6 +68,9 @@ public class signInActivity extends AppCompatActivity {
         code_text = findViewById(R.id.editTextCode);
         verify_btn = findViewById(R.id.verify_btn);
         sign_in_btn = findViewById(R.id.Sign_In_btn);
+
+        verify_grp.setVisibility(View.VISIBLE);
+        sign_in_grp.setVisibility(View.INVISIBLE);
 
         verify_btn.setOnClickListener(view -> {
             Toast.makeText(this, "toast", Toast.LENGTH_SHORT).show();
