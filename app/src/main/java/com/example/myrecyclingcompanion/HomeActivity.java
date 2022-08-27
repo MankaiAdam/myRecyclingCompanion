@@ -22,8 +22,8 @@ public class HomeActivity extends AppCompatActivity {
     int points = 562;
     int hot_streak = 3;
     
-    ImageButton overview_btn,maps_btn,shop_btn;
-    Button scan_btn;
+    ImageButton overview_btn,maps_btn;
+    Button scan_btn, shop_btn;
     ConstraintLayout overview_grp,challenges_grp;
     TextView tokens_text, total_points_text, donated_plastic_text, points_text, hot_streak_text;
     @Override
