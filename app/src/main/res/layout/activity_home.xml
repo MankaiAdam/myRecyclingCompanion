@@ -57,18 +57,18 @@
                 <ImageButton
                     android:id="@+id/overview_btn"
                     android:layout_width="117dp"
+                    android:background="#FAFAFA"
                     android:layout_height="28dp"
                     android:layout_marginTop="16dp"
-                    android:background="@drawable/mo_activated"
                     app:layout_constraintStart_toStartOf="@+id/imageView7"
                     app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
                 <ImageButton
                     android:id="@+id/map_btn"
                     android:layout_width="48dp"
+                    android:background="#FAFAFA"
                     android:layout_height="0dp"
                     android:layout_marginStart="8dp"
-                    android:background="@drawable/map_disabled"
                     app:layout_constraintBottom_toBottomOf="@+id/overview_btn"
                     app:layout_constraintStart_toEndOf="@+id/overview_btn"
                     app:layout_constraintTop_toTopOf="@+id/overview_btn" />
@@ -162,14 +162,14 @@
                     android:textColor="#425747"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/textView"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                    app:layout_constraintTop_toBottomOf="@+id/mainwidget" />
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Lorem Ipsum Lorem Ipsum"
+                    android:text="Earn tokens to redeem gifts!"
                     android:textColor="#6F6F6F"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -180,7 +180,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Lorem Ipsum Lorem Ipsum"
+                    android:text="Complete challenges to obtain bonus rewards"
                     android:textColor="#6F6F6F"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="@+id/textView5"
@@ -264,7 +264,7 @@
                     app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/mainwidget"
                     android:layout_width="350dp"
                     android:layout_height="210dp"
                     android:layout_marginTop="16dp"
@@ -305,9 +305,9 @@
                     android:textAlignment="center"
                     android:textColor="#9E815C"
                     android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintBottom_toBottomOf="@+id/mainwidget"
                     app:layout_constraintEnd_toStartOf="@+id/donated_plastic_text"
-                    app:layout_constraintStart_toStartOf="@+id/imageView" />
+                    app:layout_constraintStart_toStartOf="@+id/mainwidget" />
 
                 <TextView
                     android:id="@+id/donated_plastic_text"
@@ -319,9 +319,9 @@
                     android:textAlignment="center"
                     android:textColor="#008FE6"
                     android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView"
-                    app:layout_constraintStart_toStartOf="@+id/imageView" />
+                    app:layout_constraintBottom_toBottomOf="@+id/mainwidget"
+                    app:layout_constraintEnd_toEndOf="@+id/mainwidget"
+                    app:layout_constraintStart_toStartOf="@+id/mainwidget" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

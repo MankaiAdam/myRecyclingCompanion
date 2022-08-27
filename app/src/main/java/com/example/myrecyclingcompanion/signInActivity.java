@@ -2,6 +2,7 @@ package com.example.myrecyclingcompanion;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import java.util.concurrent.TimeUnit;
@@ -15,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
@@ -73,9 +75,9 @@ public class signInActivity extends AppCompatActivity {
         sign_in_grp.setVisibility(View.INVISIBLE);
 
         verify_btn.setOnClickListener(view -> {
-            Toast.makeText(this, "toast", Toast.LENGTH_SHORT).show();
             Log.d("tag", "clicked");
             if(phone_number_text.getText().toString().length() == 8){
+                verify_code();
                 if (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this)
                         == ConnectionResult.SUCCESS) {
                     // The SafetyNet Attestation API is available.
@@ -128,7 +130,7 @@ public class signInActivity extends AppCompatActivity {
                                                     // Save verification ID and resending token so we can use them later
                                                     mVerificationId = verificationId;
                                                     mResendToken = token;
-                                                    verify_code();
+
                                                 }
                                             };
                                             PhoneAuthOptions options =

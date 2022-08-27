@@ -21,9 +21,9 @@ public class ShopActivity extends AppCompatActivity {
     int tokens = 1;
 
     ImageButton overview_btn,maps_btn;
-    Button scan_btn, back_btn;
-    ConstraintLayout overview_grp,challenges_grp;
-    TextView tokens_text, total_points_text;
+    Button scan_btn;
+    ImageButton back_btn;
+    TextView tokens_text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +32,6 @@ public class ShopActivity extends AppCompatActivity {
         back_btn = findViewById(R.id.back_btn);
         scan_btn = findViewById(R.id.scan_btn);
         tokens_text = findViewById(R.id.tokens_text);
-        total_points_text = findViewById(R.id.total_points_text);
 
         update_info();
         back_btn.setOnClickListener(view -> {
@@ -52,7 +51,6 @@ public class ShopActivity extends AppCompatActivity {
     }
     public void update_info(){
         tokens_text.setText(tokens+"");
-        total_points_text.setText(total_points+"");
     }
 
     ActivityResultLauncher<ScanOptions> barLauncher = registerForActivityResult(new ScanContract(), result->{

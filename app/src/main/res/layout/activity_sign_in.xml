@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="420dp"
@@ -28,14 +29,24 @@
         app:layout_constraintVertical_bias="0.19"
         app:srcCompat="@drawable/splash_bck" />
 
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/comp1" />
@@ -43,45 +54,61 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:textColor="#FFF"
-        android:textSize="26sp"
-        android:fontFamily="@font/poppins_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_bold"
         android:text="Help us build \na better future"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="210dp"
+        android:fontFamily="@font/poppins"
+        android:text="Together we can\nmake the world a good place!"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/verify_grp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/verify_grp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <EditText
             android:id="@+id/editTextPhone"
-            android:paddingStart="36dp"
-            android:hint="Please enter your phone number"
-            android:textColor="#368168"
-            android:textSize="16sp"
-            android:paddingTop="4dp"
-            android:textColorHint="#368168"
-            android:fontFamily="@font/poppins_medium"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="128dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="120dp"
+            android:width="350dp"
+            android:height="58dp"
             android:background="@drawable/edittext"
             android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Enter your phone number"
             android:inputType="phone"
+            android:paddingStart="32dp"
+            android:paddingTop="4dp"
+            android:textColor="#368168"
+            android:textColorHint="#368168"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageButton
             android:id="@+id/verify_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/signinn"
             app:layout_constraintBottom_toBottomOf="@+id/editTextPhone"
@@ -102,19 +129,21 @@
 
         <EditText
             android:id="@+id/editTextCode"
-            android:paddingStart="72dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="128dp"
-            android:textColor="#368168"
-            android:textSize="14sp"
-            android:paddingTop="4dp"
-            android:hint="Code"
-            android:fontFamily="@font/poppins_medium"
-            android:textColorHint="#368168"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="120dp"
+            android:width="350dp"
+            android:height="58dp"
             android:background="@drawable/edittext"
             android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Code"
             android:inputType="phone"
+            android:paddingStart="32dp"
+            android:paddingTop="4dp"
+            android:textColor="#368168"
+            android:textColorHint="#368168"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -122,8 +151,8 @@
 
         <ImageButton
             android:id="@+id/Sign_In_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/signinn"
             app:layout_constraintBottom_toBottomOf="@+id/editTextCode"
