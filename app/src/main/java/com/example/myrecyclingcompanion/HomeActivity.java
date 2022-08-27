@@ -35,20 +35,13 @@ public class HomeActivity extends AppCompatActivity {
         maps_btn = findViewById(R.id.map_btn);
         shop_btn = findViewById(R.id.shop_btn);
         scan_btn = findViewById(R.id.scan_btn);
-        /*overview_grp = findViewById(R.id.overview_grp);
-        challenges_grp = findViewById(R.id.challenges_grp);*/
         tokens_text = findViewById(R.id.tokens_text);
         total_points_text = findViewById(R.id.total_points_text);
         donated_plastic_text = findViewById(R.id.donated_plastic_text);
         points_text = findViewById(R.id.points_text);
-        //hot_streak_text = findViewById(R.id.hot_streak_text);
-        scan_btn = findViewById(R.id.shop_btn);
         overview_btn.setImageDrawable(getDrawable(R.drawable.mo_activated));
         maps_btn = findViewById(R.id.map_btn);
         maps_btn.setImageDrawable(getDrawable(R.drawable.map_disabled));
-        scan_btn = findViewById(R.id.scan_btn);
-
-        scan_btn = findViewById(R.id.scan_btn);
 
         update_info();
 
