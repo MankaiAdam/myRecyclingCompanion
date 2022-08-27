@@ -65,7 +65,7 @@ public class signInActivity extends AppCompatActivity {
                 if (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this)
                         == ConnectionResult.SUCCESS) {
                     // The SafetyNet Attestation API is available.
-                    byte[] nonce = hexStringToByteArray("e04fd020ea3a6910a2d808002b30309d");
+                    byte[] nonce = hexStringToByteArray("e84fd020ea3a6910a2d808002b30309d");
                     SafetyNet.getClient(this).attest(nonce, "AIzaSyA-8KG4hP-XqQkQ1cD1hOU-DRzmpcCP8eI")
                             .addOnSuccessListener(this,
                                     new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
