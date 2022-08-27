@@ -61,6 +61,8 @@ public class signInActivity extends AppCompatActivity {
         sign_in_btn = findViewById(R.id.Sign_In_btn);
 
         verify_btn.setOnClickListener(view -> {
+            Toast.makeText(this, "toast", Toast.LENGTH_SHORT).show();
+            Log.d("tag", "clicked");
             if(phone_number_text.getText().toString().length() == 8){
                 if (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(this)
                         == ConnectionResult.SUCCESS) {
