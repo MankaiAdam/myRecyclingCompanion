@@ -42,13 +42,13 @@ public class HomeActivity extends AppCompatActivity {
         donated_plastic_text = findViewById(R.id.donated_plastic_text);
         points_text = findViewById(R.id.points_text);
         //hot_streak_text = findViewById(R.id.hot_streak_text);
-        scan_btn = findViewById(R.id.scan_btn);
+        scan_btn = findViewById(R.id.shop_btn);
         overview_btn.setImageDrawable(getDrawable(R.drawable.mo_activated));
         maps_btn = findViewById(R.id.map_btn);
         maps_btn.setImageDrawable(getDrawable(R.drawable.map_disabled));
-        scan_btn = findViewById(R.id.scan_btn1);
+        scan_btn = findViewById(R.id.scan_btn);
 
-        scan_btn = findViewById(R.id.scan_btn1);
+        scan_btn = findViewById(R.id.scan_btn);
 
         update_info();
 
