@@ -3,8 +3,8 @@ package com.example.myrecyclingcompanion;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -21,7 +21,9 @@ public class HomeActivity extends AppCompatActivity {
     int donated_plastic = 20;
     int points = 562;
     int hot_streak = 3;
-    Button overview_btn,challenges_btn,shop_btn,scan_btn;
+    
+    ImageButton overview_btn,maps_btn,shop_btn;
+    Button scan_btn;
     ConstraintLayout overview_grp,challenges_grp;
     TextView tokens_text, total_points_text, donated_plastic_text, points_text, hot_streak_text;
     @Override
@@ -30,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         overview_btn = findViewById(R.id.overview_btn);
-        challenges_btn = findViewById(R.id.map_btn);
+        maps_btn = findViewById(R.id.map_btn);
         shop_btn = findViewById(R.id.shop_btn);
         scan_btn = findViewById(R.id.scan_btn);
         overview_grp = findViewById(R.id.overview_grp);
@@ -41,16 +43,18 @@ public class HomeActivity extends AppCompatActivity {
         points_text = findViewById(R.id.points_text);
         hot_streak_text = findViewById(R.id.hot_streak_text);
         scan_btn = findViewById(R.id.scan_btn);
+        overview_btn.setImageDrawable(getDrawable(R.drawable.mo_activated));
+        maps_btn = findViewById(R.id.challenges_btn);
+        maps_btn.setImageDrawable(getDrawable(R.drawable.map_disabled));
+        scan_btn = findViewById(R.id.scan_btn1);
+
+        scan_btn = findViewById(R.id.scan_btn1);
 
         update_info();
 
         overview_btn.setOnClickListener(view -> {
-            overview_grp.setVisibility(View.VISIBLE);
-            challenges_grp.setVisibility(View.INVISIBLE);
         });
-        challenges_btn.setOnClickListener(view -> {
-            overview_grp.setVisibility(View.INVISIBLE);
-            challenges_grp.setVisibility(View.VISIBLE);
+        maps_btn.setOnClickListener(view -> {
         });
         shop_btn.setOnClickListener(view -> {
             startActivity(new Intent(HomeActivity.this, ShopActivity.class));
@@ -92,7 +96,6 @@ public class HomeActivity extends AppCompatActivity {
             points +=  Integer.parseInt(content.substring(content.indexOf('_') + 1));
             update_info();
             Log.d("tag",result.getContents());
-            //
         }
     });
 }
