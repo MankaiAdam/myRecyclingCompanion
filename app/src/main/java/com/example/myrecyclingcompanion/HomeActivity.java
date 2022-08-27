@@ -1,5 +1,6 @@
 package com.example.myrecyclingcompanion;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
     int donated_plastic = 20;
     int points = 562;
     int hot_streak = 3;
-    Button overview_btn,challenges_btn,scan_btn;
+    Button overview_btn,challenges_btn,shop_btn,scan_btn;
     ConstraintLayout overview_grp,challenges_grp;
     TextView tokens_text, total_points_text, donated_plastic_text, points_text, hot_streak_text;
     @Override
@@ -30,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
 
         overview_btn = findViewById(R.id.overview_btn);
         challenges_btn = findViewById(R.id.map_btn);
+        shop_btn = findViewById(R.id.shop_btn);
         scan_btn = findViewById(R.id.scan_btn);
         overview_grp = findViewById(R.id.overview_grp);
         challenges_grp = findViewById(R.id.challenges_grp);
@@ -49,6 +51,9 @@ public class HomeActivity extends AppCompatActivity {
         challenges_btn.setOnClickListener(view -> {
             overview_grp.setVisibility(View.INVISIBLE);
             challenges_grp.setVisibility(View.VISIBLE);
+        });
+        shop_btn.setOnClickListener(view -> {
+            startActivity(new Intent(HomeActivity.this, ShopActivity.class));
         });
         scan_btn.setOnClickListener(view -> {
             scan_code();
